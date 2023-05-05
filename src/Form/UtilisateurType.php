@@ -2,23 +2,28 @@
 
 namespace App\Form;
 
-use App\Entity\Accueil;
+use App\Entity\Utilisateur;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class AccueilType extends AbstractType
+class UtilisateurType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            ->add('email')
+            ->add('nom')
+            ->add('prénom')
+            ->add('téléphone')
+            ->add('pays')
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
-            'data_class' => Accueil::class,
+            'data_class' => Utilisateur::class,
         ]);
     }
 }
