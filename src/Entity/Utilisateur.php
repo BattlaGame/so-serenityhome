@@ -40,7 +40,7 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $telephone = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $pays = null;
+    private ?string $langue = null;
 
     #[ORM\Column]
     private ?bool $verifier = false;
@@ -151,14 +151,14 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
         return $this;
     }
 
-    public function getPays(): ?string
+    public function getLangue(): ?string
     {
-        return $this->pays;
+        return $this->langue;
     }
 
-    public function setPays(string $pays): self
+    public function setLangue(string $langue): self
     {
-        $this->pays = $pays;
+        $this->langue = $langue;
 
         return $this;
     }
