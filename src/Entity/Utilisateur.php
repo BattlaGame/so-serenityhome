@@ -42,12 +42,9 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $pays = null;
 
-<<<<<<< HEAD
     #[ORM\Column]
     private ?bool $verifier = false;
 
-=======
->>>>>>> refs/remotes/origine/main
     public function getId(): ?int
     {
         return $this->id;
