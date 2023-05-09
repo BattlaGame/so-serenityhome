@@ -162,7 +162,6 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-<<<<<<< HEAD
 
     public function getVerifier(): ?bool
     {
@@ -175,6 +174,4 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-=======
->>>>>>> refs/remotes/origine/main
 }
