@@ -5,6 +5,12 @@
 {% block body %}
     <h1>Utilisateur index</h1>
 
+    {% if app.user and app.user.verifier == false %}
+    <p> Vous n'avez pas vérifier votrre compte avec votre adresse mail <p>
+    {% endif %}
+
+
+
     <table class="table">
         <thead>
             <tr>

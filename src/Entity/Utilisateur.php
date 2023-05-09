@@ -42,6 +42,9 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $pays = null;
 
+    #[ORM\Column]
+    private ?bool $verifier = false;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -156,6 +159,18 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPays(string $pays): self
     {
         $this->pays = $pays;
+
+        return $this;
+    }
+
+    public function getVerifier(): ?bool
+    {
+        return $this->verifier;
+    }
+
+    public function setVerifier(bool $verifier): self
+    {
+        $this->verifier = $verifier;
 
         return $this;
     }
