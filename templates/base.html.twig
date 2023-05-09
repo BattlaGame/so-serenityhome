@@ -23,9 +23,9 @@
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="/home">Accueil</a>
+                    <a class="text-dark" href="/accueil">Accueil</a>
                     <span class="text-muted px-2">|</span>
-                    <a class="text-dark" href="/produit">Tout nos appartements</a>
+                    <a class="text-dark" href="/appartements">Tout nos appartements</a>
                     <span class="text-muted px-2">|</span>
 
                 </div>
@@ -33,7 +33,7 @@
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
                     {% if app.user %}
-                        <a class="text-dark" href="/deconnexion">Se déconnecter</a>
+                        <a class="text-dark" href="/logout">Se déconnecter</a>
                     {% else %}
                         <a class="text-dark" href="/connexion">Se connecter</a>
                         <span class="text-muted px-2">|</span>
