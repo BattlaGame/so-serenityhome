@@ -168,5 +168,5 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
         
     }
 
-    public function setVerifier(boolean $verifier):
+    public function setVerifier(boolean $verifier):  
 }
