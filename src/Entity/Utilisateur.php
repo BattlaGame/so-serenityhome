@@ -42,9 +42,12 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 255)]
     private ?string $pays = null;
 
-    #[ORM\Column(type: 'boolean')]
-    private $verifier = false;
+<<<<<<< HEAD
+    #[ORM\Column]
+    private ?bool $verifier = false;
 
+=======
+>>>>>>> refs/remotes/origine/main
     public function getId(): ?int
     {
         return $this->id;
@@ -162,11 +165,19 @@ class Utilisateur implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
+<<<<<<< HEAD
 
-    public function getVerifier(): $boolean
+    public function getVerifier(): ?bool
     {
-        
+        return $this->verifier;
     }
 
-    public function setVerifier(boolean $verifier):  
+    public function setVerifier(bool $verifier): self
+    {
+        $this->verifier = $verifier;
+
+        return $this;
+    }
+=======
+>>>>>>> refs/remotes/origine/main
 }
