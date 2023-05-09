@@ -3,18 +3,16 @@
 
 <head>
     <meta charset="utf-8">
-    <title>OXY</title>
+    <title>So'SerenityHome</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
-
-
-
-    <!-- Libraries Stylesheet -->
-    <link href="{{ asset('assets/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <link href="{{ asset('assets/js/bootstrap.min.js')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -24,9 +22,8 @@
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
                     <a class="text-dark" href="/accueil">Accueil</a>
-                    <span class="text-muted px-2">|</span>
+                    <span class="text-dark px-2">|</span>
                     <a class="text-dark" href="/appartements">Tout nos appartements</a>
-                    <span class="text-muted px-2">|</span>
 
                 </div>
             </div>
@@ -36,7 +33,7 @@
                         <a class="text-dark" href="/logout">Se déconnecter</a>
                     {% else %}
                         <a class="text-dark" href="/connexion">Se connecter</a>
-                        <span class="text-muted px-2">|</span>
+                        <span class="text-dark px-2">|</span>
                         <a class="text-dark" href="/inscription">S'inscrire</a>
                     {% endif %}
                     </div>
@@ -49,25 +46,31 @@
     {% endblock %}
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-secondary text-dark mt-5 pt-5">
-        <div class="row px-xl-5 pt-5">
+    <div class="container-fluid bg-trois text-dark mt-5 pt-5">
+        <div class="row px-xl-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <a href="" class="text-decoration-none">
-                    <h1 class="mb-4 display-5 font-weight-semi-bold">So'SerenityHome</h1>
-                </a>
+                <img src= {{asset('assets/image/logo-blanc.png')}} width=360px height=197px>
             </div>
-            <div class="col-lg-8 col-md-12">
-                <div class="row justify-content-center">
                     <div class="col-md-4 mb-5">
-                        <h5 class="font-weight-bold text-dark mb-4">Liens rapide</h5>
+                        <h5 class="font-weight-bold text-yellow mb-4">Plan du site</h5>
                         <div class="d-flex flex-column justify-content-start">
                             <a class="text-dark mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
                             <a class="text-dark mb-2" href="/produit"><i class="fa fa-angle-right mr-2"></i>Tout nos appartements</a>
                         </div>
                     </div>
-                </div>
-            </div>
+
+
+                    <div class="col-md-4 mb-5">
+                        <h5 class="font-weight-bold text-yellow mb-4">Contact</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="fa fa-angle-right mr-1">+ 33 6 84 64 25 86</a>
+                            <a class="fa fa-angle-right mr-1">contact@so-serenityhome.fr</a>
+                            <a class="fa fa-angle-right mr-1">30 Avenue de la libération | 74300 Cluses</a>
+                        </div>
+                    </div>
+            <a class="fa fa-angle-right mr-2">SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS</a>
         </div>
+    </div>
     <!-- Footer End -->
 
 </body>
