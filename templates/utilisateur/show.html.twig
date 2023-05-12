@@ -3,6 +3,8 @@
 {% block title %}Utilisateur{% endblock %}
 
 {% block body %}
+
+{% if utilisateur.id == app.user.id or is_granted('ROLE_ADMIN') %}
     <h1>Utilisateur</h1>
 
     <table class="table">
@@ -36,15 +38,17 @@
                 <td>{{ utilisateur.telephone }}</td>
             </tr>
             <tr>
-                <th>Pays</th>
-                <td>{{ utilisateur.pays }}</td>
+                <th>Langue</th>
+                <td>{{ utilisateur.langue }}</td>
             </tr>
         </tbody>
     </table>
 
-    <a href="{{ path('app_utilisateur_index') }}">back to list</a>
-
-    <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}">edit</a>
+    <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}">Modifier votre compte</a>
 
     {{ include('utilisateur/_delete_form.html.twig') }}
+{% else %}
+    <p> Vous n'avez pas accès à cette page, veuillez retourner à l'accueil </p>
+{% endif %}
+
 {% endblock %}
