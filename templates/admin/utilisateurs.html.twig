@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Utilisateur index{% endblock %}
+{% block title %}Liste utilisateur - So SerenityHome{% endblock %}
 
 {% block body %}
-    <h1>Utilisateur index</h1>
+    <h1>Liste de tous les utilisateur</h1>
 
     {% if app.user and app.user.verifier == false %}
     <p> Vous n'avez pas vérifier votrre compte avec votre adresse mail <p>
@@ -22,7 +22,7 @@
                 <th>Prenom</th>
                 <th>Telephone</th>
                 <th>Langue</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +39,7 @@
                 <td>
                     <a href="{{ path('app_utilisateur_show', {'id': utilisateur.id}) }}">show</a>
                     <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}">edit</a>
+                    {{ include('utilisateur/_delete_form.html.twig') }}
                 </td>
             </tr>
         {% else %}

@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 
 class UtilisateurType extends AbstractType
 {
@@ -22,7 +23,7 @@ class UtilisateurType extends AbstractType
             ])
             ->add('prenom', TextType::class, [
             ])
-            ->add('telephone', TextType::class, [
+            ->add('telephone', TelType::class, [
             ])
             ->add('langue', ChoiceType::class, [
                 'choices' => [

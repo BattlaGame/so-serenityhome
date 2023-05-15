@@ -18,12 +18,6 @@ class AccueilController extends AbstractController
             'controller_name' => 'AccueilController',
         ]);
     }
-    #[Route('/appartements', name: 'app_appartements')]
-    public function index(): Response
-    {
-        return $this->render('accueil/appartements.html.twig', [
-            'controller_name' => 'AccueilController',
-        ]);
-    }
+    
 }
 

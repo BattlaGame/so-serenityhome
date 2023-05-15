@@ -1,14 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Utilisateur{% endblock %}
+{% block title %}Modification d'utilisateur{% endblock %}
 
 {% block body %}
 {% if utilisateur.id == app.user.id or is_granted('ROLE_ADMIN') %}
-    <h1>Edit Utilisateur</h1>
+    <h1>Modification de {{utilisateur.nom}} {{utilisateur.prenom}}</h1>
 
-    {{ include('utilisateur/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_utilisateur_index') }}">back to list</a>
+    {{ include('utilisateur/_form.html.twig', {'button_label': 'Modifier'}) }}
 
     {{ include('utilisateur/_delete_form.html.twig') }}
 {% else %}
