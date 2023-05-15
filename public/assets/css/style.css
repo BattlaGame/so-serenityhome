@@ -1,3 +1,35 @@
-.text-blue{color:#243061!important}a.text-blue:focus,a.text-blue:hover{color:#243061!important}
-.text-yellow{color:#EBA822!important}a.text-yellow:focus,a.text-yellow:hover{color:#EBA822!important}
-.text-white{color:#FFFFFF!important}a.text-yellow:focus,a.text-yellow:hover{color:#FFFFFF!important}
+.text-blue{color:#243061!important; font-family: sans-serif;}a.text-blue:focus,a.text-blue:hover{color:#243061!important}
+.text-yellow{color:#EBA822!important ; font-family: sans-serif;}
+.text-white{color:#FFFFFF!important ; font-family: sans-serif;}a.text-yellow:focus,a.text-yellow:hover{color:#FFFFFF!important}
+
+.button-toolbar{
+    border-radius: 20px;
+    padding: 10px 5px;
+    min-width: 100px;
+    background-color: #243061;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-toolbar:hover{
+    border-radius: 20px;
+    padding: 10px 5px;
+    min-width: 100px;
+    border-color: #EBA822;
+    background-color: #EBA822;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.border-yellow{
+    border-top: 1px solid #EBA822;
+}
+
+.font-12px{
+    font-size: 12px;
+}
