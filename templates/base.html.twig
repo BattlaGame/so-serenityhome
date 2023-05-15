@@ -18,6 +18,7 @@
     <link href="{{ asset('assets/js/bootstrap.min.js')}}" rel="stylesheet">
 
     <link href="{{ asset('assets/css/style.css')}}" rel="stylesheet">
+    <link href="{{ asset('assets/css/style2.css')}}" rel="stylesheet">
     <link href="{{ asset('assets/js/script.js')}}" rel="stylesheet">
 </head>
 
@@ -26,28 +27,39 @@
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
+            </div>
+            <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
-                    <a class="text-dark" href="/accueil">Accueil</a>
-                    <span class="text-dark px-2">|</span>
-                    <a class="text-dark" href="/appartements">Tout nos appartements</a>
-                    
-                    {% if is_granted('ROLE_ADMIN') %}
-                    <span class="text-dark px-2">|</span>
-                    <a class="text-dark" href="/admin">Page d'administration</a> 
-                    {% endif %}
+                    <a class="text-white">+ 33 6 84 64 25 86</a> 
+                    <span class="px-2"></span>
+                    <a class="text-white">so.serenityhome@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container-fluid">
+        <div class="row py-2 px-xl-5">
+            <div class="col-lg-6 d-none d-lg-block ml-6">
+                <div class="d-inline-flex align-items-center">
+                    <a href="/accueil"><img src= {{asset('assets/image/logoLong.png')}} width=172px height=94px></a>
                 </div>
             </div>
             <div class="col-lg-6 text-center text-lg-right">
                 <div class="d-inline-flex align-items-center">
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                    <a class="text-blue" href="/admin">Page d'administration</a> 
+                    <span class="text-blue px-2">|</span>
+                    {% endif %}
                     {% if app.user %}
-                        <a class="text-dark" href="{{ path('app_utilisateur_show', {'id': app.user.id}) }}">{{ app.user.nom }}</a>
-                        <span class="text-dark px-2">|</span>
-                        <a class="text-dark" href="/logout">Se déconnecter</a>
+                        <a class="text-blue" href="{{ path('app_utilisateur_show', {'id': app.user.id}) }}">{{ app.user.nom }}</a>
+                        <span class="text-blue px-2">|</span>
+                        <a class="text-blue" href="/logout">Se déconnecter</a>
                     {% else %}
-                        <a class="text-dark" href="/connexion">Se connecter</a>
-                        <span class="text-dark px-2">|</span>
-                        <a class="text-dark" href="/inscription">S'inscrire</a>
+                        <a class="text-blue" href="/connexion">Se connecter</a>
+                        <span class="text-blue px-2">|</span>
+                        <a class="text-blue" href="/inscription">S'inscrire</a>
                     {% endif %}
                     </div>
             </div>
@@ -68,8 +80,8 @@
             <div class="col-md-4 mb-5 pt-5">
                 <h5 class="font-weight-bold text-yellow mb-4">Plan du site</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-dark mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
-                    <a class="text-dark mb-2" href="/appartements"><i class="fa fa-angle-right mr-2"></i>Tout nos appartements</a>
+                    <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
+                    <a class="text-white mb-2" href="/appartements"><i class="fa fa-angle-right mr-2"></i>Tout nos appartements</a>
                 </div>
             </div>
 
