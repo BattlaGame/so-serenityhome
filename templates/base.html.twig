@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>So'SerenityHome</title>
+    <title>{% block title %}So'SerenityHome{% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -57,12 +57,12 @@
     <div class="container-fluid bg-trois text-dark mt-5 pt-5">
         <div class="row px-xl-5">
             <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
-                <img src= {{asset('assets/image/logo-blanc.png')}} width=360px height=197px>
+                <a href="/accueil"><img src= {{asset('assets/image/logo-blanc.png')}} width=360px height=197px></a>
             </div>
                     <div class="col-md-4 mb-5">
                         <h5 class="font-weight-bold text-yellow mb-4">Plan du site</h5>
                         <div class="d-flex flex-column justify-content-start">
-                            <a class="text-dark mb-2" href="/home"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
+                            <a class="text-dark mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
                             <a class="text-dark mb-2" href="/appartements"><i class="fa fa-angle-right mr-2"></i>Tout nos appartements</a>
                         </div>
                     </div>
