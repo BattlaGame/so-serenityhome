@@ -5,23 +5,24 @@
 {% block body %}
 
 <!-- Carrousel -->
-<div class="text-right center-div carousel-container">
+<div class="center-div carousel-container">
   <div class="carousel">
     <div class="slide">
-      <img src={{ asset('assets/image/carrousel/image4.jpg')}} alt="Image 1">
-      <div class="slide-text">
-        <h3>Titre de l'image 1</h2>
-        <p>Description de l'image 1</p>
+      <img src={{ asset('assets/image/carrousel/mountain.jpg')}} alt="Image 1">
+      <div class="slide-text text-center div-height img1-text-hauteur">
+        <p class="font-26px text-yellow mb-4">Votre séjour au centre de la Haute-Savoie avec</p>
+        <img class="img-logo-carrousel" src={{ asset('assets/image/carrousel/lg.png')}} alt="So'SerenityHome">
+        <p class="bold-600 font-60px text-yellow mt-4">Sentez-vous chez vous !</p>
       </div>
     </div>
-    <div class="slide">
+    <div class="text-right slide">
       <img src={{ asset('assets/image/carrousel/image2.jpg')}} alt="Image 2">
       <div class="slide-text">
         <h3>Titre de l'image 2</h2>
         <p>Description de l'image 2</p>
       </div>
     </div>
-    <div class="slide">
+    <div class="text-right slide">
       <img src={{ asset('assets/image/carrousel/image3.jpg')}} alt="Image 3">
       <div class="slide-text">
         <h3>Titre de l'image 3</h2>

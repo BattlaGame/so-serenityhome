@@ -21,7 +21,7 @@ transition: transform 0.5s ease;
 
   .slide img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     object-fit: cover;
   }
 
@@ -33,6 +33,11 @@ transition: transform 0.5s ease;
   padding: 10px;
   font-family: sans-serif;
   color: #fff;
+}
+
+.img-logo-carrousel{
+  width: 25%!important;
+
 }
 
 .slide-text h2, .slide-text p {
@@ -75,6 +80,10 @@ transform: translateY(-50%);
     transform: scale(1.1);
     opacity: 1;
     transform: rotate(0deg);
+}
+
+.img1-text-hauteur{
+  padding-top: 15%;
 }
 
 
