@@ -38,19 +38,19 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-blanc">
-        <div class="row py-3 px-xl-5">
+    <div class="container-fluid bg-blanc center-div">
+        <div class="center-div row py-3 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
                     <a href="/accueil"><img src= {{asset('assets/image/logoLong.png')}} width=172px height=94px></a>
                 </div>
             </div>
-            <div class="col-lg-6 text-center text-lg-right py-3">
+            <div class="center-div col-lg-6 text-lg-right py-3">
                 <div class="d-inline-flex align-items-center">
 
                     {% if is_granted('ROLE_ADMIN') %}
-                    <a class="text-blue" href="/admin">Page d'administration</a> 
-                    <span class="text-blue px-2">|</span>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">Administration</button>
+                        <span class="text-blue px-2"></span>
                     {% endif %}
                     {% if app.user %}
                         <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}'">{{ app.user.nom }}</button>

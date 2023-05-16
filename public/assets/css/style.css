@@ -1,6 +1,6 @@
 .text-blue{color:#243061!important; font-family: sans-serif;}a.text-blue:focus,a.text-blue:hover{color:#243061!important}
 .text-yellow{color:#EBA822!important ; font-family: sans-serif;}
-.text-bluelight{color:#30459B!important}
+.text-bluelight{color:#30459B!important; font-family: sans-serif;}
 .text-white{color:#FFFFFF!important ; font-family: sans-serif;}a.text-yellow:focus,a.text-yellow:hover{color:#FFFFFF!important}
 
 .button-toolbar{
@@ -70,6 +70,18 @@ div-100{
     font-weight: 600;
 }
 
+.bold-700{
+    font-weight: 700;
+}
+
+.font-26px{
+    font-size: 26px;
+}
+
+.font-16px{
+    font-size: 16px;
+}
+
 .bg-montagne{
     background-image: url("http://127.0.0.1:8000/assets/image/samoens-photo.jpg");
     background-size: cover;
@@ -78,4 +90,29 @@ div-100{
 
 .bg-blanc{
     background-color: #ffffff;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.padding-10px{
+    padding: 10px;
+}
+
+.line-2px{
+    line-height: 1em;
+}
+
+.center-div{
+    margin: auto;
+}
+
+.margin-center{
+    margin-left: 250px;
+    margin-right: 250px;
 }
