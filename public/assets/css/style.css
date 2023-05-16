@@ -6,26 +6,18 @@
     border-radius: 20px;
     padding: 10px 5px;
     min-width: 100px;
+    border: none;
     background-color: #243061;
     color: #FFFFFF;
     font-family: sans-serif;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .button-toolbar:hover{
-    border-radius: 20px;
-    padding: 10px 5px;
-    min-width: 100px;
-    border-color: #EBA822;
     background-color: #EBA822;
     color: #FFFFFF;
     font-family: sans-serif;
-    border: none;
-    text-decoration: none;
     display: inline-block;
 }
 
@@ -38,46 +30,48 @@
 }
 
 .container{
-width:400px;
-margin:0 auto;
-margin-top:10%;
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
 }
-/* Bordered form */
+
 .formulaire{
-width:100%;
-padding: 30px;
-border: 1px solid #f1f1f1;
-background: #fff;
-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    width:100%;
+    padding: 30px;
+    border: 1px solid #f1f1f1;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .container-h1{
-width: 38%;
-margin: 0 auto;
-padding-bottom: 10px;
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-display: inline-block;
-border: 1px solid #ccc;
-box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
 .button-connexion {
-background-color: #53af57;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
+    background-color: #EBA822;
+    font-family: sans-serif;
+    border-radius: 20px;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
 }
 .button-connexion:hover {
-background-color: white;
-color: #53af57;
-border: 1px solid #53af57;
+    background-color: #243061;
+}
+
+.gras{
+    font-weight: bold;
+}
+
+.bg-montagne{
+    background-image: url("image/samoens-photo.jpg");
+}
+
+.bg-blanc{
+    background-color: #ffffff;
 }
