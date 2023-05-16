@@ -4,21 +4,34 @@
 
 {% block body %}
 
-<form method="post">
-    <div class="container">
-        <h1 class="mb-3 font-weight-normal">Connexion</h1>
-        <label  class="gras" for="inputEmail">Email</label>
-        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Entrez l'email" class="form-control" autocomplete="email" required autofocus>
-        <label Connexion for="inputPassword">Mot de passe</label>
-        <input type="password" name="password" id="inputPassword" placeholder="Entrez le mot de passe" class="form-control" autocomplete="current-password" required>
+<div class="bg-montagne">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post">
+        <div class="container">
+            <h1 class="mb-4 text-bluelight bold-600">Connexion</h1>
+            <label  class="gras text-bluelight" for="inputEmail">Email</label>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="Entrez l'email" class="form-control mb-3" autocomplete="email" required autofocus>
+            <label class="gras text-bluelight" Connexion for="inputPassword">Mot de passe</label>
+            <input type="password" name="password" id="inputPassword" placeholder="Entrez le mot de passe" class="form-control" autocomplete="current-password" required>
 
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+            <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-        <button class="button-connexion" type="submit">Se connecter</button>
-        {% if error %}
-            <div class="alert alert-danger">Email ou mot de passe incorrect</div>
-        {% endif %}
-    </div>
-</form>
-
+            <button class="button-yellow mt-5" type="submit">Se connecter</button>
+            {% if error %}
+                <div class="alert alert-danger">Email ou mot de passe incorrect</div>
+            {% endif %}
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
 {% endblock %}

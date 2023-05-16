@@ -22,7 +22,7 @@
     <link href="{{ asset('assets/js/script.js')}}" rel="stylesheet">
 </head>
 
-<body class="bg-montagne">
+<body class="">
     <!-- Topbar Start -->
     <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
@@ -55,7 +55,7 @@
                     {% if app.user %}
                         <button type="button" class="button-toolbar" onclick="window.location.href = '/{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
                         <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">Se déconnecter</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">Se déconnecter</button>
                     {% else %}
                         <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">Se connecter</button>
                         <span class="text-blue px-2"></span>
@@ -71,7 +71,7 @@
     {% endblock %}
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-trois mt-5">
+    <div class="container-fluid bg-trois">
         <div class="row px-xl-5">
             <div class="col-lg-4 col-md-12 mb-5 pt-2 ml-5 center">
                 <a href="/accueil"><img src= {{asset('assets/image/logo-blanc.png')}} width=360px height=197px></a>
