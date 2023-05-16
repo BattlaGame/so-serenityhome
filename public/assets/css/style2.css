@@ -1,6 +1,3 @@
-.elementor-image{
-    color:blue
-}
 .carrousel{
     width: 800px;
     height: 400px;
@@ -22,8 +19,6 @@
     cursor: pointer;
     top: 150px;
 }
-
-
 
 #g{
     left: 0;
