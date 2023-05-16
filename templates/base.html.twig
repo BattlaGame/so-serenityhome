@@ -53,7 +53,7 @@
                     <span class="text-blue px-2">|</span>
                     {% endif %}
                     {% if app.user %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}'">{{ app.user.nom }}</button>
                         <span class="text-blue px-2"></span>
                         <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">Se déconnecter</button>
                     {% else %}
