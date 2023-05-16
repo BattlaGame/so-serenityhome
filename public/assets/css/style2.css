@@ -1,0 +1,51 @@
+.elementor-image{
+    color:blue
+}
+.carrousel{
+    width: 800px;
+    height: 400px;
+    border:solid 4px #FFFFFF;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3); 
+    position:relative;
+}
+
+.container-carrousel{
+    width: 800px;
+    height: 400px;
+
+}
+
+.fleche{
+    position: absolute;
+    width: 70px; 
+    height: 70px;
+    cursor: pointer;
+    top: 150px;
+}
+
+
+
+#g{
+    left: 0;
+    opacity: 0.4;
+    transform: rotate(180deg);
+    transition: all 0.3s ease;
+}
+#g:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    transform: rotate(180deg); 
+}
+
+#d{
+    right: 0;
+    opacity: 0.4;
+    transform: rotate(0deg);
+    transition: all 0.3s ease;
+}
+
+#d:hover{
+    transform: scale(1.1);
+    opacity: 1;
+    transform: rotate(0deg);
+}
