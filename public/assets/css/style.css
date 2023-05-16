@@ -1,31 +1,24 @@
 .text-blue{color:#243061!important; font-family: sans-serif;}a.text-blue:focus,a.text-blue:hover{color:#243061!important}
 .text-yellow{color:#EBA822!important ; font-family: sans-serif;}
+.text-bluelight{color:#30459B!important}
 .text-white{color:#FFFFFF!important ; font-family: sans-serif;}a.text-yellow:focus,a.text-yellow:hover{color:#FFFFFF!important}
 
 .button-toolbar{
     border-radius: 20px;
     padding: 10px 5px;
     min-width: 100px;
+    border: none;
     background-color: #243061;
     color: #FFFFFF;
     font-family: sans-serif;
-    border: none;
-    text-decoration: none;
-    display: inline-block;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .button-toolbar:hover{
-    border-radius: 20px;
-    padding: 10px 5px;
-    min-width: 100px;
-    border-color: #EBA822;
     background-color: #EBA822;
     color: #FFFFFF;
     font-family: sans-serif;
-    border: none;
-    text-decoration: none;
     display: inline-block;
 }
 
@@ -38,46 +31,51 @@
 }
 
 .container{
-width:400px;
-margin:0 auto;
-margin-top:10%;
-}
-/* Bordered form */
-.formulaire{
-width:100%;
-padding: 30px;
-border: 1px solid #f1f1f1;
-background: #fff;
-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-}
-.container-h1{
-width: 38%;
-margin: 0 auto;
-padding-bottom: 10px;
+    border-radius: 20px;
+    width:400px;
+    margin:0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
 }
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 12px 20px;
-margin: 8px 0;
-display: inline-block;
-border: 1px solid #ccc;
-box-sizing: border-box;
+div-100{
+    height: 40px;
 }
 
-/* Set a style for all buttons */
-.button-connexion {
-background-color: #53af57;
-color: white;
-padding: 14px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
+.button-yellow {
+    background-color: #EBA822;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+    transition: all 0.3s ease;
+    transform: translateX(12.5%);
 }
 .button-connexion:hover {
-background-color: white;
-color: #53af57;
-border: 1px solid #53af57;
+    background-color: #243061;
+}
+
+.gras{
+    font-weight: bold;
+}
+
+.bold-600{
+    font-weight: 600;
+}
+
+.bg-montagne{
+    background-image: url("http://127.0.0.1:8000/assets/image/samoens-photo.jpg");
+    background-size: cover;
+    background-color: #EBA822;
+}
+
+.bg-blanc{
+    background-color: #ffffff;
 }
