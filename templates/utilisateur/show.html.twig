@@ -5,50 +5,38 @@
 {% block body %}
 
 {% if utilisateur.id == app.user.id or is_granted('ROLE_ADMIN') %}
-    <h1>Utilisateur</h1>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Id</th>
-                <td>{{ utilisateur.id }}</td>
-            </tr>
-            <tr>
-                <th>Email</th>
-                <td>{{ utilisateur.email }}</td>
-            </tr>
-            <tr>
-                <th>Roles</th>
-                <td>{{ utilisateur.roles ? utilisateur.roles|json_encode : '' }}</td>
-            </tr>
-            <tr>
-                <th>Password</th>
-                <td>{{ utilisateur.password }}</td>
-            </tr>
-            <tr>
-                <th>Nom</th>
-                <td>{{ utilisateur.nom }}</td>
-            </tr>
-            <tr>
-                <th>Prenom</th>
-                <td>{{ utilisateur.prenom }}</td>
-            </tr>
-            <tr>
-                <th>Telephone</th>
-                <td>{{ utilisateur.telephone }}</td>
-            </tr>
-            <tr>
-                <th>Langue</th>
-                <td>{{ utilisateur.langue }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}">Modifier votre compte</a>
-
-    {{ include('utilisateur/_delete_form.html.twig') }}
-{% else %}
-    <p> Vous n'avez pas accès à cette page, veuillez retourner à l'accueil </p>
-{% endif %}
-
+<div class="bg-montagne">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <div class="container-user">
+            <h1 class="mb-4 text-yellow bold-600 pl-3">{{ utilisateur.prenom }} {{ utilisateur.nom }}</h1>
+            <div class="text-bluelight font-21px pl-5">
+                <div class="same-line"><p class="bold-600">Nom :</p><p class="ml-4">{{ utilisateur.nom }}</p></div>
+                <div class="same-line"><p class="bold-600">Prénom :</p><p class="ml-4">{{ utilisateur.prenom }}</p></div>
+                <div class="same-line"><p class="bold-600">Mail :</p><p class="ml-4">{{ utilisateur.email }}</p></div>
+                <div class="same-line"><p class="bold-600">Mot de passe :</p><p class="ml-4">{{ utilisateur.password }}</p></div>
+                <div class="same-line"><p class="bold-600">Télephone :</p><p class="ml-4">{{ utilisateur.telephone }}</p></div>
+                <div class="same-line"><p class="bold-600">Langue :</p><p class="ml-4">{{ utilisateur.langue }}</p></div>
+            </div>            
+            <div class="same-line">
+                <button class="button-yellow-user mt-3 ml-5" type="submit" onclick="window.location.href = '{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}';">Modifier votre compte</button>
+                <button class="button-yellow-user mt-3 mr-5" type="submit" onclick="window.location.href = '{{ path('app_utilisateur_delete', {'id': utilisateur.id}) }}';">Supprimer votre compte</button>
+                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ utilisateur.id) }}">
+            </div>
+        </div>
+        {% else %}
+            <p> Vous n'avez pas accès à cette page, veuillez retourner à l'accueil </p>
+        {% endif %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+                {{ include('utilisateur/_delete_form.html.twig') }}
 {% endblock %}
