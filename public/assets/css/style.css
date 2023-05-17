@@ -39,16 +39,6 @@
     background: #fff;
 }
 
-.container-register{
-    border-radius: 20px;
-    width:25%;
-    margin:0 auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    background: #fff;
-    
-}
-
 .container-user{
     border-radius: 20px;
     width:45%;
@@ -178,3 +168,7 @@
     display: flex;
 }
 
+.img-carre{
+    /* aspect-ratio: 4/3; */
+    object-fit: contain;
+}
