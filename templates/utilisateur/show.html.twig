@@ -23,10 +23,10 @@
                 <div class="same-line"><p class="bold-600">Langue :</p><p class="ml-4">{{ utilisateur.langue }}</p></div>
             </div>            
             <div class="same-line">
-                <button class="button-yellow-user mt-3 ml-5" type="submit" onclick="window.location.href = '{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}';">Modifier votre compte</button>
-                <button class="button-yellow-user mt-3 mr-5" type="submit" onclick="window.location.href = '{{ path('app_utilisateur_delete', {'id': utilisateur.id}) }}';">Supprimer votre compte</button>
-                <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ utilisateur.id) }}">
+                <button class="button-yellow-user mt-3 mr-5" type="submit" onclick="window.location.href = '{{ path('app_utilisateur_edit', {'id': utilisateur.id}) }}';">Modifier votre compte</button>
+            
             </div>
+            {{ include('utilisateur/_delete_form.html.twig') }}
         </div>
         {% else %}
             <p> Vous n'avez pas accès à cette page, veuillez retourner à l'accueil </p>
@@ -38,5 +38,4 @@
     <br>
     <br>
 </div>
-                {{ include('utilisateur/_delete_form.html.twig') }}
 {% endblock %}

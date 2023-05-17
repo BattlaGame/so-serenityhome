@@ -23,27 +23,41 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
-                'label' => 'Adresse email'
+                'label' => 'Adresse email',
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('nom', TextType::class, [
                 'attr'=>[
-                    'class' => ''
+                    'class' => 'form-control'
                 ]
             ])
             ->add('prenom', TextType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('telephone', TelType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('langue', ChoiceType::class, [
                 'choices' => [
                     'Français' => 'Fr',
+                ],
+                'attr'=>[
+                    'class' => 'form-control'
                 ]
             ])
             ->add('plainPassword', PasswordType::class, [
                 // instead of being set onto the object directly,
                 // this is read and encoded in the controller
                 'mapped' => false,
-                'attr' => ['autocomplete' => 'new-password'],
+                'attr' => [
+                    'autocomplete' => 'new-password',
+                    'class' => 'form-control'],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez entrer un mot de passe',
@@ -57,6 +71,9 @@ class RegistrationFormType extends AbstractType
             ])
             ->add('agreeTerms', CheckboxType::class, [
                 'mapped' => false,
+                'attr'=>[
+                    'class' => 'form-control'
+                ],
                 'constraints' => [
                     new IsTrue([
                         'message' => 'Vous devez accepter nos conditions !',

@@ -4,11 +4,33 @@
 
 {% block body %}
 {% if utilisateur.id == app.user.id or is_granted('ROLE_ADMIN') %}
-    <h1>Modification de {{utilisateur.nom}} {{utilisateur.prenom}}</h1>
-
-    {{ include('utilisateur/_form.html.twig', {'button_label': 'Modifier'}) }}
-
-    {{ include('utilisateur/_delete_form.html.twig') }}
+    
+<div class="bg-montagne">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form method="post">
+        <div class="container-user">
+            <h1 class="mb-4 ml-4 text-bluelight bold-600">Modification de <b class="text-yellow bold-600">{{utilisateur.nom}} {{utilisateur.prenom}}</b></h1>
+            
+            <div class="gras text-bluelight ml-4 mr-4">
+            {{ include('utilisateur/_form.html.twig', {'button_label': 'Modifier'}) }}
+            {{ include('utilisateur/_delete_form.html.twig') }}
+            </div>
+            
+            
+        </div>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
 {% else %}
     <p> Vous n'avez pas accès à cette page, veuillez retourner à l'accueil </p>
 {% endif %}
