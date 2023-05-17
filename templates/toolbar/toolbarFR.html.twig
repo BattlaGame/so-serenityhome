@@ -1,0 +1,13 @@
+{% if is_granted('ROLE_ADMIN') %}
+    <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">Administration</button>
+    <span class="text-blue px-2"></span>
+{% endif %}
+{% if app.user %}
+    <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
+    <span class="text-blue px-2"></span>
+    <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">Se déconnecter</button>
+{% else %}
+    <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">Se connecter</button>
+    <span class="text-blue px-2"></span>
+    <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">S'inscrire</button>
+{% endif %}

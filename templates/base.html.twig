@@ -45,21 +45,12 @@
             </div>
             <div class="center-div col-lg-6 text-lg-right py-3">
                 <div class="d-inline-flex align-items-center">
-
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">Administration</button>
-                        <span class="text-blue px-2"></span>
-                    {% endif %}
-                    {% if app.user %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
-                        <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">Se déconnecter</button>
+                    {% if app.user and app.user.langue == "En" %}   
+                    {{ include('toolbar/toolbarEN.html.twig') }}
                     {% else %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">Se connecter</button>
-                        <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">S'inscrire</button>
+                    {{ include('toolbar/toolbarFR.html.twig') }}
                     {% endif %}
-                    </div>
+                </div>
             </div>
         </div>
     </div>
