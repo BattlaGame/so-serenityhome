@@ -9,23 +9,23 @@
     <div class="slide">
       <img src={{ asset('assets/image/carrousel/mountain.jpg')}} alt="Image 1">
       <div class="slide-text text-center div-height img1-text-hauteur">
-        <p class="font-26px text-yellow mb-4">Votre séjour au centre de la Haute-Savoie avec</p>
+        <p class="font-26px text-yellow mb-4">{% trans %}Votre séjour au centre de la Haute-Savoie avec{% endtrans %}</p>
         <img class="img-logo-carrousel" src={{ asset('assets/image/carrousel/lg.png')}} alt="So'SerenityHome">
-        <p class="bold-600 font-60px text-yellow mt-4">Sentez-vous chez vous !</p>
+        <p class="bold-600 font-60px text-yellow mt-4">{% trans %}Sentez-vous chez vous !{% endtrans %}</p>
       </div>
     </div>
     <div class="text-right slide">
       <img src={{ asset('assets/image/carrousel/image2.jpg')}} alt="Image 2">
       <div class="slide-text">
-        <h3>Titre de l'image 2</h2>
-        <p>Description de l'image 2</p>
+        <h3>{% trans %}Titre de l'image 2{% endtrans %}</h2>
+        <p>{% trans %}Description de l'image 2{% endtrans %}</p>
       </div>
     </div>
     <div class="text-right slide">
       <img src={{ asset('assets/image/carrousel/image3.jpg')}} alt="Image 3">
       <div class="slide-text">
-        <h3>Titre de l'image 3</h2>
-        <p>Description de l'image 3</p>
+        <h3>{% trans %}Titre de l'image 3{% endtrans %}</h2>
+        <p>{% trans %}Description de l'image 3{% endtrans %}</p>
       </div>
     </div>
   </div>
@@ -75,41 +75,41 @@ updateSlideWidth();
 
 <!-- Texte et icon -->
 <div>
-	<p class="text-center font-26px text-bluelight bold-700 mb-4 mt-5">Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements</p>		
+	<p class="text-center font-26px text-bluelight bold-700 mb-4 mt-5">{% trans %}Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements{% endtrans %}</p>		
 </div>
 
 <div>
-	<p class="text-center font-26px text-bluelight bold-700 mb-5">Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :</p>		
+	<p class="text-center font-26px text-bluelight bold-700 mb-5">{% trans %}Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :{% endtrans %}</p>		
 </div>
 <div class="margin-center text-center  px-xl-5 same-line">
     <div class="center-div ">
         <img class="size-24h" src="{{ asset('assets/image/24h24h.png')}}">
-        <p class="line-2px font-26px text-yellow bold-600">Arrivée à votre convenance</p>
-        <p class="font-16px text-bluelight">Mise à disposition d’une boite à clés sécurisée</p>
+        <p class="line-2px font-26px text-yellow bold-600">{% trans %}Arrivée à votre convenance{% endtrans %}</p>
+        <p class="font-16px text-bluelight">{% trans %}Mise à disposition d’une boite à clés sécurisée{% endtrans %}</p>
     </div>
     <div class="center-div ">
         <img class="size-fourchette" src="{{ asset('assets/image/fourchette.png')}}">
-        <p class="line-2px font-26px text-yellow bold-600">Equipé tout confort</p>
-        <p class="font-16px text-bluelight">Tout le matériel comme à la maison</p>
+        <p class="line-2px font-26px text-yellow bold-600">{% trans %}Equipé tout confort{% endtrans %}</p>
+        <p class="font-16px text-bluelight">{% trans %}Tout le matériel comme à la maison{% endtrans %}</p>
     </div>
     <div class="center-div ">
         <img class="size-wifi" src="{{ asset('assets/image/wifi.png')}}">
-        <p class="line-2px font-26px text-yellow bold-600">WIFI / Netflix</p>
-        <p class="font-16px text-bluelight">WIFI et Netflix gratuits dans chaque appartement</p>
+        <p class="line-2px font-26px text-yellow bold-600">{% trans %}WIFI / Netflix{% endtrans %}</p>
+        <p class="font-16px text-bluelight">{% trans %}WIFI et Netflix gratuits dans chaque appartement{% endtrans %}</p>
     </div>
     <div class="center-div ">
         <img class="size-serviette" src="{{ asset('assets/image/serviette.jpg')}}">
-        <p class="line-2px font-26px text-yellow bold-600">Services hoteliers</p>
-        <p class="font-16px text-bluelight">Kit d’accueil et linge de maison fournis</p>
+        <p class="line-2px font-26px text-yellow bold-600">{% trans %}Services hoteliers{% endtrans %}</p>
+        <p class="font-16px text-bluelight">{% trans %}Kit d’accueil et linge de maison fournis{% endtrans %}</p>
     </div>
 </div>
 
 <!-- Iframe SuperHote -->
 <iframe id="iframe" allow="fullscreen" 
-src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI" 
+{% trans %}src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"{% endtrans %} 
 style="display:block;" frameborder="0" scrolling="auto"
 sandbox="allow-scripts allow-forms allow-same-origin allow-presentation">
-Moteur de réservation de superhote</iframe>
+{% trans %}Moteur de réservation de superhote{% endtrans %}</iframe>
 
 {# 
 {% if app.user and app.user.langue == "En" %}   

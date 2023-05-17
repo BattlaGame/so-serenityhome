@@ -9,6 +9,106 @@
         <source>So'SerenityHome | Accueil</source>
         <target>So'SerenityHome | Home</target>
       </trans-unit>
+      <trans-unit id="BDI0tIK" resname="src=&quot;https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI&quot;">
+        <source>src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"</source>
+        <target>src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI?lang=en"</target>
+      </trans-unit>
+      <trans-unit id="sYru0ag" resname="Se déconnecter">
+        <source>Se déconnecter</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="CsPSyzA" resname="Se connecter">
+        <source>Se connecter</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="PCX0_17" resname="S'inscrire">
+        <source>S'inscrire</source>
+        <target>Register</target>
+      </trans-unit>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="S0LGaQ6" resname="Administration">
+        <source>Administration</source>
+        <target>Admin</target>
+      </trans-unit>
+      <trans-unit id="K1w9JnI" resname="Contact">
+        <source>Contact</source>
+        <target>Contact</target>
+      </trans-unit>
+      <trans-unit id="FgLEIau" resname="SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS">
+        <source>SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS</source>
+        <target>SO'SERENITYHOME 2020 © ALL RIGHTS RESERVED</target>
+      </trans-unit>
+      <trans-unit id="pmrx3E7" resname="Votre séjour au centre de la Haute-Savoie avec">
+        <source>Votre séjour au centre de la Haute-Savoie avec</source>
+        <target>Your stay in the center of Haute-Savoie with</target>
+      </trans-unit>
+      <trans-unit id="ufpEVue" resname="Sentez-vous chez vous !">
+        <source>Sentez-vous chez vous !</source>
+        <target>Feel at home !</target>
+      </trans-unit>
+      <trans-unit id="1FOf9ZB" resname="Titre de l'image 2">
+        <source>Titre de l'image 2</source>
+        <target>__Titre de l'image 2</target>
+      </trans-unit>
+      <trans-unit id="YpUFIEB" resname="Description de l'image 2">
+        <source>Description de l'image 2</source>
+        <target>__Description de l'image 2</target>
+      </trans-unit>
+      <trans-unit id="IcLyY_k" resname="Titre de l'image 3">
+        <source>Titre de l'image 3</source>
+        <target>__Titre de l'image 3</target>
+      </trans-unit>
+      <trans-unit id="18s6biS" resname="Description de l'image 3">
+        <source>Description de l'image 3</source>
+        <target>__Description de l'image 3</target>
+      </trans-unit>
+      <trans-unit id="oGv62J3" resname="Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements">
+        <source>Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements</source>
+        <target>Our priority : to bring you comfort, pleasure and ease in choosing our accommodation</target>
+      </trans-unit>
+      <trans-unit id="bUPwmWV" resname="Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :">
+        <source>Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :</source>
+        <target>Why choose our apartments instead of a hotel room :</target>
+      </trans-unit>
+      <trans-unit id="KkZ71dB" resname="Arrivée à votre convenance">
+        <source>Arrivée à votre convenance</source>
+        <target>Arrival at your home</target>
+      </trans-unit>
+      <trans-unit id="S0Bc8A0" resname="Mise à disposition d’une boite à clés sécurisée">
+        <source>Mise à disposition d’une boite à clés sécurisée</source>
+        <target>Provision of a secure key box</target>
+      </trans-unit>
+      <trans-unit id="zioqM4X" resname="Equipé tout confort">
+        <source>Equipé tout confort</source>
+        <target>Equipped with all comfort</target>
+      </trans-unit>
+      <trans-unit id="cax3HE5" resname="Tout le matériel comme à la maison">
+        <source>Tout le matériel comme à la maison</source>
+        <target>All the material as at home</target>
+      </trans-unit>
+      <trans-unit id="Usgx2mU" resname="WIFI / Netflix">
+        <source>WIFI / Netflix</source>
+        <target>WIFI / Netflix</target>
+      </trans-unit>
+      <trans-unit id="HKEu3nx" resname="WIFI et Netflix gratuits dans chaque appartement">
+        <source>WIFI et Netflix gratuits dans chaque appartement</source>
+        <target>Free WIFI and Netflix in each apartment</target>
+      </trans-unit>
+      <trans-unit id="Ej5gyhL" resname="Services hoteliers">
+        <source>Services hoteliers</source>
+        <target>Hotel services</target>
+      </trans-unit>
+      <trans-unit id="wPdX9Ox" resname="Kit d’accueil et linge de maison fournis">
+        <source>Kit d’accueil et linge de maison fournis</source>
+        <target>Welcome kit and linen provided</target>
+      </trans-unit>
+      <trans-unit id="X_ZWmXK" resname="Moteur de réservation de superhote">
+        <source>Moteur de réservation de superhote</source>
+        <target>Superhote booking engine</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

@@ -33,6 +33,9 @@
                     <img class="mr-2" src= {{asset('assets/image/icone-email-blanc.png')}} width=4% height=4%>
                     <a class="text-white font-12px">so.serenityhome@gmail.com</a>
                 </div>
+                {% for locale in locales %}
+                <a href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" height="26px" width="50px"></a>
+                {% endfor %}
            
         </div>
 
@@ -46,29 +49,28 @@
             <div class="center-div col-lg-6 text-lg-right py-3">
                 <div class="d-inline-flex align-items-center">
                     {% if is_granted('ROLE_ADMIN') %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">Administration</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">{% trans %}Administration{% endtrans %}</button>
                         <span class="text-blue px-2"></span>
                     {% endif %}
                     {% if app.user %}
                         <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
                         <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">Se déconnecter</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">{% trans %}Se déconnecter{% endtrans %}</button>
                     {% else %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">Se connecter</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">{% trans %}Se connecter{% endtrans %}</button>
                         <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">S'inscrire</button>
+                        <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">{% trans %}S'inscrire{% endtrans %}</button>
                     {% endif %}
                 </div>
             </div>
         </div>
     </div>
-    {% for locale in locales %}
-        <a href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" height="100px" width="200px"></a>
-    {% endfor %}
+    
     <!-- Topbar End -->
 
     {% block body %}
     {% endblock %}
+    
 
     <!-- Footer Start -->
     <div class="container-fluid bg-trois ">
@@ -80,23 +82,23 @@
             <div class="col-md-3 mb-5 pt-5">
                 <h5 class="font-weight-bold text-yellow mb-4">Plan du site</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>Accueil</a>
+                    <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>{% trans %}Accueil{% endtrans %}</a>
 
                     {% if is_granted('ROLE_ADMIN') %}
-                        <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>Administration</a>
+                        <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>{% trans %}Administration{% endtrans %}</a>
                     {% endif %}
                     {% if app.user %}
                         <a class="text-white mb-2" href="{{ path('app_utilisateur_show', {'id': app.user.id}) }}"><i class="fa fa-angle-right mr-2"></i>{{ app.user.nom }}</a>
-                        <a class="text-white mb-2" href="/logout"><i class="fa fa-angle-right mr-2"></i>Se déconnecter</a>
+                        <a class="text-white mb-2" href="/logout"><i class="fa fa-angle-right mr-2"></i>{% trans %}Se déconnecter{% endtrans %}</a>
                     {% else %}
-                        <a class="text-white mb-2" href="/connexion"><i class="fa fa-angle-right mr-2"></i>Se connecter</a>
-                        <a class="text-white mb-2" href="/inscription"><i class="fa fa-angle-right mr-2"></i>S'inscrire</a>
+                        <a class="text-white mb-2" href="/connexion"><i class="fa fa-angle-right mr-2"></i>{% trans %}Se connecter{% endtrans %}</a>
+                        <a class="text-white mb-2" href="/inscription"><i class="fa fa-angle-right mr-2"></i>{% trans %}S'inscrire{% endtrans %}</a>
                     {% endif %}
                 </div>
             </div>
 
             <div class="col-md-3 mb-5 pt-5">
-                <h5 class="font-weight-bold text-yellow mb-4">Contact</h5>
+                <h5 class="font-weight-bold text-yellow mb-4">{% trans %}Contact{% endtrans %}</h5>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="fa fa-angle-right text-white mr-1">+ 33 6 84 64 25 86</a>
                     <a class="fa fa-angle-right text-white mr-1">contact@so-serenityhome.fr</a>
@@ -106,7 +108,7 @@
         </div>
     </div>
     <div class="bg-trois border-yellow pt-3 pr-3 pl-3 pb-3">
-        <a class="text-white">SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS</a>
+        <a class="text-white">{% trans %}SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS{% endtrans %}</a>
     </div>
     <!-- Footer End -->
 
