@@ -55,6 +55,6 @@ class UtilisateurController extends AbstractController
             $utilisateurRepository->remove($utilisateur, true);
         }
 
-        return $this->redirectToRoute('app_utilisateur_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_accueil', [], Response::HTTP_SEE_OTHER);
     }
 }

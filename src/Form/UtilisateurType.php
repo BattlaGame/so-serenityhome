@@ -18,20 +18,34 @@ class UtilisateurType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('nom', TextType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('prenom', TextType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('telephone', TelType::class, [
+                'attr'=>[
+                    'class' => 'form-control'
+                ]
             ])
             ->add('langue', ChoiceType::class, [
                 'choices' => [
                     'Français' => 'Fr',
                     
+                ],
+                'attr'=>[
+                    'class' => 'form-control'
                 ]
             ])
-            ->add('password')
         ;
     }
 
