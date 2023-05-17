@@ -46,6 +46,7 @@ class RegistrationFormType extends AbstractType
             ->add('langue', ChoiceType::class, [
                 'choices' => [
                     'Français' => 'Fr',
+                    'English' => 'En',
                 ],
                 'attr'=>[
                     'class' => 'form-control'
