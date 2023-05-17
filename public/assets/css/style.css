@@ -39,6 +39,16 @@
     background: #fff;
 }
 
+.container-register{
+    border-radius: 20px;
+    width:25%;
+    margin:0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #fff;
+    
+}
+
 .container-user{
     border-radius: 20px;
     width:45%;
@@ -167,3 +177,4 @@
 .same-line{
     display: flex;
 }
+

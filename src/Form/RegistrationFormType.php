@@ -25,22 +25,22 @@ class RegistrationFormType extends AbstractType
             ->add('email', EmailType::class, [
                 'label' => 'Adresse email',
                 'attr'=>[
-                    'class' => 'form-control'
+                    'class' => 'form-control mb-3'
                 ]
             ])
             ->add('nom', TextType::class, [
                 'attr'=>[
-                    'class' => 'form-control'
+                    'class' => 'form-control mb-3'
                 ]
             ])
             ->add('prenom', TextType::class, [
                 'attr'=>[
-                    'class' => 'form-control'
+                    'class' => 'form-control mb-3'
                 ]
             ])
             ->add('telephone', TelType::class, [
                 'attr'=>[
-                    'class' => 'form-control'
+                    'class' => 'form-control mb-3'
                 ]
             ])
             ->add('langue', ChoiceType::class, [
@@ -49,7 +49,7 @@ class RegistrationFormType extends AbstractType
                     'English' => 'En',
                 ],
                 'attr'=>[
-                    'class' => 'form-control'
+                    'class' => 'form-control mb-3'
                 ]
             ])
             ->add('plainPassword', PasswordType::class, [
@@ -58,7 +58,7 @@ class RegistrationFormType extends AbstractType
                 'mapped' => false,
                 'attr' => [
                     'autocomplete' => 'new-password',
-                    'class' => 'form-control'],
+                    'class' => 'form-control mb-3'],
                 'constraints' => [
                     new NotBlank([
                         'message' => 'Veuillez entrer un mot de passe',
