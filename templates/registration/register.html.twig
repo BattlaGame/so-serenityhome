@@ -14,8 +14,9 @@
     <form method="post">
         <div class="container">
             <h1 class="mb-4 text-bluelight bold-600">Inscription</h1>
-
+            <div class="gras text-bluelight">
             {{ form_start(registrationForm) }}
+            </div>
             {{ form_row(registrationForm.nom) }}
             {{ form_row(registrationForm.prenom) }}
             {{ form_row(registrationForm.email) }}
