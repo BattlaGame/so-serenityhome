@@ -26,6 +26,14 @@ class AccueilController extends AbstractController
             'controller_name' => 'AccueilController',
         ]);
     }
+
+    #[Route('/change-locale/{locale}', name: 'app_change-locale')]
+    public function changeLocale($locale, Request $request)
+    {
+        $request ->getSession()->set('_locale',$locale);
+
+        return $this->redirect($request->headers->get('referer'));
+    }
     
 }
 
