@@ -132,7 +132,7 @@
 }
 
 .bg-blanc{
-    background-color: #ffffff;
+    background: linear-gradient(90deg, #480096 45%, #000000 100%);;
 }
 
 .text-center{
@@ -181,5 +181,4 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     width: 2vw;
     height: 2vw;
-    border-radius: 50%;
 }
