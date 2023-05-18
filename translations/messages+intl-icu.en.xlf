@@ -109,6 +109,10 @@
         <source>Moteur de réservation de superhote</source>
         <target>Superhote booking engine</target>
       </trans-unit>
+      <trans-unit id="z7GsDIB" resname="Inscription">
+        <source>Inscription</source>
+        <target>Register</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
