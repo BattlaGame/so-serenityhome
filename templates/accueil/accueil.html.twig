@@ -33,46 +33,6 @@
 <img src={{ asset('assets/image/fleche.png')}} class="next-button" alt="Suivant">
 </div>
 
-<script>
-const carousel = document.querySelector('.carousel');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-
-let slideIndex = 0;
-let slideCount = carousel.children.length;
-let slideWidth = 0;
-
-prevButton.addEventListener('click', () => {
-  slideIndex--;
-  if (slideIndex < 0) {
-    slideIndex = slideCount - 1;
-  }
-  updateCarousel();
-});
-
-nextButton.addEventListener('click', () => {
-  slideIndex++;
-  if (slideIndex >= slideCount) {
-    slideIndex = 0;
-  }
-  updateCarousel();
-});
-
-function updateCarousel() {
-  carousel.style.transform = `translateX(-${slideIndex * slideWidth}px`;
-}
-
-function updateSlideWidth() {
-  slideWidth = carousel.offsetWidth;
-  updateCarousel();
-}
-
-window.addEventListener('resize', updateSlideWidth);
-updateSlideWidth();
-</script>
-
-
-
 <!-- Texte et icon -->
 <div>
 	<p class="text-center font-26px text-bluelight bold-700 mb-4 mt-5">{% trans %}Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements{% endtrans %}</p>		
@@ -107,16 +67,8 @@ updateSlideWidth();
 <!-- Iframe SuperHote -->
 <iframe id="iframe" allow="fullscreen" 
 {% trans %}src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"{% endtrans %} 
-style="display:block;" frameborder="0" scrolling="no"
+style="display:block;" frameborder="0" scrolling="auto"
 sandbox="allow-scripts allow-forms allow-same-origin allow-presentation">
 {% trans %}Moteur de réservation de superhote{% endtrans %}</iframe>
-
-{# 
-{% if app.user and app.user.langue == "En" %}   
-{{ include('accueil/accueilEN.html.twig') }}
-{% else %}
-{{ include('accueil/accueilFR.html.twig') }}
-{% endif %}
-#}
 
 {% endblock %}

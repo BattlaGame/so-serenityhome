@@ -47,13 +47,11 @@ transition: transform 0.5s ease;
 .prev-button,
 .next-button {
 position: absolute;
-width: 70px; 
-height: 70px;
+width: 10vw;
 cursor: pointer;
-top: 50%;
+top: 40%;
 transform: translateY(-50%);
 }
-
 
 .prev-button{
     left: 0;
