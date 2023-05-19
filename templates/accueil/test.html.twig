@@ -3,5 +3,21 @@
 {% block title %}Test{% endblock %}
 
 {% block body %}  
+<iframe id="iframe" allow="fullscreen" 
+{% trans %}src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"{% endtrans %} 
+style="display:block;" frameborder="0" scrolling="auto"
+sandbox="allow-scripts allow-forms allow-same-origin allow-presentation">
+{% trans %}Moteur de réservation de superhote{% endtrans %}</iframe>
 
+<script>
+  function resizeIframe() {
+    var iframe = document.getElementById('iframe');
+    iframe.style.height = iframe.contentWindow.document.documentElement.scrollHeight + 'px';
+  }
+
+  window.addEventListener('DOMContentLoaded', resizeIframe);
+
+  // Écouteur d'événement pour détecter lorsque le contenu de l'iframe est chargé
+  iframe.addEventListener('load', resizeIframe);
+</script>
 {% endblock %}
