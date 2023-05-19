@@ -33,7 +33,7 @@
                     <img class="mr-2" src= {{asset('assets/image/icone-email-blanc.png')}} width=4% height=4%>
                     <a class="text-white font-12px">so.serenityhome@gmail.com</a>
                     {% for locale in locales %}
-                    <a href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" height="26px" width="50px"></a>
+                    <a class="ml-3" href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" width="30vw"></a>
                     {% endfor %}
                 </div>
                 
