@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}So'SerenityHome | Inscription{% endblock %}
+{% block title %}So'SerenityHome | {% trans %}Inscription{% endtrans %}{% endblock %}
 
 
 {% block body %}
@@ -26,7 +26,7 @@
             }) }}
             {{ form_row(registrationForm.agreeTerms) }}
             </div>
-            <button type="submit" class="button-yellow">S'inscrire</button>
+            <button type="submit" class="button-yellow">{% trans %}S'inscrire{% endtrans %}</button>
             {{ form_end(registrationForm) }}
         </div>
     </form>

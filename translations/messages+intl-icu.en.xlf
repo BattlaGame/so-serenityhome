@@ -5,10 +5,6 @@
       <tool tool-id="symfony" tool-name="Symfony"/>
     </header>
     <body>
-      <trans-unit id="pzGeium" resname="So'SerenityHome | Accueil">
-        <source>So'SerenityHome | Accueil</source>
-        <target>So'SerenityHome | Home</target>
-      </trans-unit>
       <trans-unit id="BDI0tIK" resname="src=&quot;https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI&quot;">
         <source>src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"</source>
         <target>src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI?lang=en"</target>
@@ -112,6 +108,74 @@
       <trans-unit id="z7GsDIB" resname="Inscription">
         <source>Inscription</source>
         <target>Register</target>
+      </trans-unit>
+      <trans-unit id="YdaVBBA" resname="Connexion">
+        <source>Connexion</source>
+        <target>Login</target>
+      </trans-unit>
+      <trans-unit id="szwn32b" resname="Adresse email">
+        <source>Adresse email</source>
+        <target>E-mail address</target>
+      </trans-unit>
+      <trans-unit id=".5yLjAZ" resname="Mot de passe">
+        <source>Mot de passe</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="tUyJKsG" resname="Email ou mot de passe incorrect">
+        <source>Email ou mot de passe incorrect</source>
+        <target>Incorrect e-mail or password</target>
+      </trans-unit>
+      <trans-unit id="H.tI4ez" resname="Modification de">
+        <source>Modification de </source>
+        <target>Modification of </target>
+      </trans-unit>
+      <trans-unit id="gsEYSi1" resname="Nom :">
+        <source>Nom :</source>
+        <target>Name :</target>
+      </trans-unit>
+      <trans-unit id="cvBj1Uq" resname="Prénom :">
+        <source>Prénom :</source>
+        <target>First name :</target>
+      </trans-unit>
+      <trans-unit id="Iynq7F3" resname="Adresse mail :">
+        <source>Adresse mail :</source>
+        <target>E-mail address :</target>
+      </trans-unit>
+      <trans-unit id="AFPac0a" resname="Mot de passe :">
+        <source>Mot de passe :</source>
+        <target>Password :</target>
+      </trans-unit>
+      <trans-unit id="KfywEG4" resname="Télephone :">
+        <source>Télephone :</source>
+        <target>Phone :</target>
+      </trans-unit>
+      <trans-unit id="aMPLpAk" resname="Langue :">
+        <source>Langue :</source>
+        <target>Language :</target>
+      </trans-unit>
+      <trans-unit id="xbbT2v2" resname="Modifier votre compte">
+        <source>Modifier votre compte</source>
+        <target>Modify your account</target>
+      </trans-unit>
+      <trans-unit id="l.OPEsT" resname="Vous n'avez pas accès à cette page, veuillez retourner à l'accueil">
+        <source>Vous n'avez pas accès à cette page, veuillez retourner à l'accueil</source>
+        <target>You do not have access to this page, please return to the homepage</target>
+      </trans-unit>
+      <trans-unit id="IY4PTgw" resname="Supprimer votre compte">
+        <source>Supprimer votre compte</source>
+        <target>Remove your account</target>
+      </trans-unit>
+      <trans-unit id=".Zck.H9" resname="Sauvegarder les modification">
+        <source>Sauvegarder les modification</source>
+        <target>Save the modifications</target>
+      </trans-unit>
+      <trans-unit id="RoibQ7y" resname="Modification">
+        <source>Modification</source>
+        <target>Modifications</target>
+      </trans-unit>
+      <trans-unit id="ch5bKau" resname="Utilisateur">
+        <source>Utilisateur</source>
+        <target>User</target>
       </trans-unit>
     </body>
   </file>
