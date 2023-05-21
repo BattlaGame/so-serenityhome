@@ -3,10 +3,26 @@
 {% block title %}Test{% endblock %}
 
 {% block body %}  
-<iframe id="iframe" allow="fullscreen" class="item-center"
+<iframe id="iframe" allow="fullscreen"
 {% trans %}src="https://app.superhote.com/#/get-available-rentals/QGxkGD8ET7vGr9ix8mglm7naI"{% endtrans %} 
 style="display:block;" frameborder="0" scrolling="auto"
 sandbox="allow-scripts allow-forms allow-same-origin allow-presentation">
 {% trans %}Moteur de réservation de superhote{% endtrans %}</iframe>
+
+<script>
+var iframe = document.getElementById('iframe');
+
+function resizeIframe() {
+  iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+}
+
+// Appeler la fonction de redimensionnement initiale
+resizeIframe();
+
+// Ajouter un écouteur d'événement pour redimensionner l'iframe lorsque le contenu change
+iframe.onload = resizeIframe;
+</script>
+
+
 
 {% endblock %}

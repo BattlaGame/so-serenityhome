@@ -83,20 +83,20 @@ transition: transform 0.5s ease;
   padding-top: 15%;
 }
 
-#iframe{
-  width: 99%;
-  height: 93vh;
-  margin-left: auto;
-  margin-right: auto;
+
+#iframe {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  border: none;
 }
 
 @media screen and (max-width: 768px) {
   #iframe{
     width: 90%;
     height: 93vh;
+    margin-left: auto;
+    margin-right: auto;
   }
+
 }
-
-
-
-
