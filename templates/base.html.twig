@@ -31,10 +31,12 @@
                 <a class="text-white font-12px">+ 33 6 84 64 25 86</a> 
                 <span class="px-2"></span>
                 <img class="mr-2" src= {{asset('assets/image/icone-email-blanc.png')}} width=4% height=4%>
-                <a class="text-white font-12px">so.serenityhome@gmail.com</a>  
-                {% for locale in locales %}
-                <a href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" height="26px" width="50px"></a>
-                {% endfor %}
+                <a class="text-white font-12px">so.serenityhome@gmail.com</a>
+                <div class="warp-phone">  
+                    {% for locale in locales %}
+                    <a href="{{ path('app_change-locale', {'locale':locale}) }}"><img class="langue" src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}"></a>
+                    {% endfor %}
+                </div>
             </div>
     </div>
 
