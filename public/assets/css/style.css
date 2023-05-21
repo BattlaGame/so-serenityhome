@@ -141,7 +141,7 @@
 }
 
 .text-right{
-    text-align: right;
+    /* text-align: right; */
 }
 
 .text-left{
@@ -161,8 +161,7 @@
 }
 
 .margin-center{
-    margin-left: 250px;
-    margin-right: 250px;
+    margin: auto;
 }
 
 .div-height{
@@ -182,4 +181,77 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     width: 2vw;
     height: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+    .warp-phone{
+        display: block!important;
+    }
+    .no-margin-phone{
+        margin: 0!important;
+    }
+    .padding-phone{
+        padding-top: 20px!important;
+    }
+    .font-phone{
+        font-size: 1.2em;
+        font-weight: 800;
+    }
+    .clear-left{
+        clear: left;
+    }
+    .text-center-phone{
+        text-align: center!important;
+    }
+    .float-left{
+        float: none!important;
+    }
+    .mb-toolbar-phone{
+        margin-bottom: 20px;
+    }
+    .padding-toolbar-phone{
+        padding-bottom: 20px!important;
+    }
+    .font-so-footer-phone{
+        font-size: 0.7em;
+    }
+    .prev-button,
+    .next-button {
+    width: 50px!important;
+    }
+    .font-carrousel1-phone{
+        font-size: 1.1em;
+        margin-bottom: 10px!important;
+    }
+    .font-carrousel2-phone{
+        font-size: 1.5em;
+        margin-top: 10px!important;
+    }
+    .img-logo-carrousel{
+        width: 100px!important;
+    }
+}
+
+.item-center{
+    align-items: center;
+}
+
+.size-img-accueil{
+    width: 90px;
+  }
+
+.float-left{
+    float: left;
+}
+
+.pt-48{
+    padding-top: 48px;
+}
+
+.pb-48{
+    padding-bottom: 48px;
+}
+
+.logo-toolbar{
+    margin-top: -40px;
 }
