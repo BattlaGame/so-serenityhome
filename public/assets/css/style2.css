@@ -90,6 +90,13 @@ transition: transform 0.5s ease;
   margin-right: auto;
 }
 
+@media screen and (max-width: 768px) {
+  #iframe{
+    width: 90%;
+    height: 93vh;
+  }
+}
+
 
 
 
