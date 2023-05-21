@@ -19,7 +19,7 @@ transition: transform 0.5s ease;
     position: relative;
   }
 
-  .slide img {
+  .slide-img {
     width: 100%;
     object-fit: cover;
   }
@@ -35,7 +35,7 @@ transition: transform 0.5s ease;
 }
 
 .img-logo-carrousel{
-  width: 25%!important;
+  width: 300px!important;
 
 }
 
@@ -45,13 +45,7 @@ transition: transform 0.5s ease;
 
 
 .prev-button,
-.next-button {
-position: absolute;
-width: 10vw;
-cursor: pointer;
-top: 40%;
-transform: translateY(-50%);
-}
+.next-button {position: absolute;width: 100px;cursor: pointer;top: 40%;transform: translateY(-50%);}
 
 .prev-button{
     left: 0;
@@ -81,20 +75,6 @@ transform: translateY(-50%);
 
 .img1-text-hauteur{
   padding-top: 15%;
-}
-
-.size-24h{
-  width: 6vw;
-}
-
-.size-wifi{
-  width: 6vw;
-}
-.size-fourchette{
-  width: 6vw;
-}
-.size-serviette{
-  width: 6vw;
 }
 
 #iframe{

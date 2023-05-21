@@ -24,45 +24,36 @@
 
 <body class="">
     <!-- Topbar Start -->
-        <div class="bg-secondary py-2 px-xl-5 text-lg-right">
-     
-                <div class="d-inline-flex align-items-center">
-                    <img class="mr-2" src= {{asset('assets/image/icone-telephone-blanc.png')}} width=4% height=4%>
-                    <a class="text-white font-12px">+ 33 6 84 64 25 86</a> 
-                    <span class="px-2"></span>
-                    <img class="mr-2" src= {{asset('assets/image/icone-email-blanc.png')}} width=4% height=4%>
-                    <a class="text-white font-12px">so.serenityhome@gmail.com</a>
-                    {% for locale in locales %}
-                    <a class="ml-3" href="{{ path('app_change-locale', {'locale':locale}) }}"><img src="{{asset('assets/image/langue/'~locale~'.jpg')}}" alt="{{locale}}" width="30vw"></a>
-                    {% endfor %}
-                </div>
-                
-           
-        </div>
-
-    <div class="container-fluid bg-blanc center-div">
-        <div class="center-div row py-3 px-xl-5">
-            <div class="col-lg-6 d-none d-lg-block">
-                <div class="d-inline-flex align-items-center">
-                    <a href="/accueil"><img src= {{asset('assets/image/logoLong.png')}} width=30% height=30%></a>
-                </div>
+    <div class="bg-secondary py-2 px-xl-5 text-lg-right">
+    
+            <div class="d-inline-flex align-items-center text-center-phone warp-phone">
+                <img class="mr-2" src= {{asset('assets/image/icone-telephone-blanc.png')}} width=4% height=4%>
+                <a class="text-white font-12px">+ 33 6 84 64 25 86</a> 
+                <span class="px-2"></span>
+                <img class="mr-2" src= {{asset('assets/image/icone-email-blanc.png')}} width=4% height=4%>
+                <a class="text-white font-12px">so.serenityhome@gmail.com</a>  
             </div>
-            <div class="center-div col-lg-6 text-lg-right py-3">
-                <div class="d-inline-flex align-items-center">
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">{% trans %}Administration{% endtrans %}</button>
-                        <span class="text-blue px-2"></span>
-                    {% endif %}
-                    {% if app.user %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
-                        <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">{% trans %}Se déconnecter{% endtrans %}</button>
-                    {% else %}
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">{% trans %}Se connecter{% endtrans %}</button>
-                        <span class="text-blue px-2"></span>
-                        <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">{% trans %}S'inscrire{% endtrans %}</button>
-                    {% endif %}
-                </div>
+    </div>
+
+    <div>
+        <div class="item-center pt-48 pb-48 bg-blanc pl-5 pr-5 padding-toolbar-phone">
+            <div class="text-center-phone mb-toolbar-phone">
+                <a href="/accueil"><img class="float-left logo-toolbar" src={{asset('assets/image/logoLong.png')}} width=180px></a>
+            </div>
+            <div class="text-right clear-left text-center-phone">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <button type="button" class="button-toolbar" onclick="window.location.href = '/admin';">{% trans %}Administration{% endtrans %}</button>
+                    <span class="px-2"></span>
+                {% endif %}
+                {% if app.user %}
+                    <button type="button" class="button-toolbar" onclick="window.location.href = '{{ path('app_utilisateur_show', {'id': app.user.id}) }}';">{{ app.user.nom }}</button>
+                    <span class="px-2"></span>
+                    <button type="button" class="button-toolbar" onclick="window.location.href = '/logout';">{% trans %}Se déconnecter{% endtrans %}</button>
+                {% else %}
+                    <button type="button" class="button-toolbar" onclick="window.location.href = '/connexion';">{% trans %}Se connecter{% endtrans %}</button>
+                    <span class="px-2"></span>
+                    <button type="button" class="button-toolbar" onclick="window.location.href = '/inscription';">{% trans %}S'inscrire{% endtrans %}</button>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -76,11 +67,11 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-trois ">
         <div class="row px-xl-5">
-            <div class="col-lg-4 col-md-12 mb-5 pt-2 ml-5 text-center">
+            <div class="col-lg-4 col-md-12 mb-5 pt-2 ml-5 text-center no-margin-phone">
                 <a href="/accueil"><img src= {{asset('assets/image/logo-blanc.png')}} width=70% height=90%></a>
             </div>
 
-            <div class="col-md-3 mb-5 pt-5">
+            <div class="col-md-3 mb-5 pt-5 padding-phone no-margin-phone">
                 <h5 class="font-weight-bold text-yellow mb-4">Plan du site</h5>
                 <div class="d-flex flex-column justify-content-start">
                     <a class="text-white mb-2" href="/accueil"><i class="fa fa-angle-right mr-2"></i>{% trans %}Accueil{% endtrans %}</a>
@@ -98,18 +89,18 @@
                 </div>
             </div>
 
-            <div class="col-md-3 mb-5 pt-5">
+            <div class="col-md-3 mb-5 pt-5 padding-phone">
                 <h5 class="font-weight-bold text-yellow mb-4">{% trans %}Contact{% endtrans %}</h5>
                 <div class="d-flex flex-column justify-content-start">
-                    <a class="fa fa-angle-right text-white mr-1">+ 33 6 84 64 25 86</a>
-                    <a class="fa fa-angle-right text-white mr-1">contact@so-serenityhome.fr</a>
-                    <a class="fa fa-angle-right text-white mr-1">30 Avenue de la libération | 74300 Cluses</a>
+                    <a class="fa fa-angle-right text-white mr-1 ml-2">+ 33 6 84 64 25 86</a>
+                    <a class="fa fa-angle-right text-white mr-1 ml-2">contact@so-serenityhome.fr</a>
+                    <a class="fa fa-angle-right text-white mr-1 ml-2">30 Avenue de la libération | 74300 Cluses</a>
                 </div>
             </div>
         </div>
     </div>
     <div class="bg-trois border-yellow pt-3 pr-3 pl-3 pb-3">
-        <a class="text-white">{% trans %}SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS{% endtrans %}</a>
+        <a class="text-white font-so-footer-phone">{% trans %}SO'SERENITYHOME 2020 © TOUS DROITS RÉSERVÉS{% endtrans %}</a>
     </div>
     <!-- Footer End -->
 

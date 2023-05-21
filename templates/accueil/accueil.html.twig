@@ -9,9 +9,9 @@
     <div class="slide">
       <img src={{ asset('assets/image/carrousel/mountain.jpg')}} alt="Image 1">
       <div class="slide-text text-center div-height img1-text-hauteur">
-        <p class="font-26px text-yellow mb-4">{% trans %}Votre séjour au centre de la Haute-Savoie avec{% endtrans %}</p>
+        <p class="font-26px text-yellow mb-4 font-carrousel1-phone">{% trans %}Votre séjour au centre de la Haute-Savoie avec{% endtrans %}</p>
         <img class="img-logo-carrousel" src={{ asset('assets/image/carrousel/lg.png')}} alt="So'SerenityHome">
-        <p class="bold-600 font-60px text-yellow mt-4">{% trans %}Sentez-vous chez vous !{% endtrans %}</p>
+        <p class="bold-600 font-60px text-yellow mt-4 font-carrousel2-phone">{% trans %}Sentez-vous chez vous !{% endtrans %}</p>
       </div>
     </div>
     <div class="text-right slide">
@@ -33,35 +33,75 @@
 <img src={{ asset('assets/image/fleche.png')}} class="next-button" alt="Suivant">
 </div>
 
+<script> 
+  const carousel = document.querySelector('.carousel');
+  const prevButton = document.querySelector('.prev-button');
+  const nextButton = document.querySelector('.next-button');
+
+  let slideIndex = 0;
+  let slideCount = carousel.children.length;
+  let slideWidth = 0;
+
+  prevButton.addEventListener('click', () => {
+    slideIndex--;
+    if (slideIndex < 0) {
+      slideIndex = slideCount - 1;
+    }
+    updateCarousel();
+  });
+
+  nextButton.addEventListener('click', () => {
+    slideIndex++;
+    if (slideIndex >= slideCount) {
+      slideIndex = 0;
+    }
+    updateCarousel();
+  });
+
+  function updateCarousel() {
+    carousel.style.transform = `translateX(-${slideIndex * slideWidth}px`;
+  }
+
+  function updateSlideWidth() {
+    slideWidth = carousel.offsetWidth;
+    updateCarousel();
+  }
+
+  window.addEventListener('resize', updateSlideWidth);
+  updateSlideWidth();
+</script>
+
 <!-- Texte et icon -->
 <div>
-	<p class="text-center font-26px text-bluelight bold-700 mb-4 mt-5">{% trans %}Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements{% endtrans %}</p>		
+	<p class="text-center font-26px text-bluelight bold-700 mb-4 mt-5 font-phone">{% trans %}Notre priorité : vous apporter confort, plaisir et facilité en choisissant nos logements{% endtrans %}</p>		
 </div>
 
 <div>
-	<p class="text-center font-26px text-bluelight bold-700 mb-5">{% trans %}Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :{% endtrans %}</p>		
+	<p class="text-center font-26px text-bluelight bold-700 mb-5 font-phone">{% trans %}Pourquoi choisir nos appartements au lieu d’une chambre d'hôtel :{% endtrans %}</p>		
 </div>
-<div class="margin-center text-center  px-xl-5 same-line">
-    <div class="center-div ">
-        <img class="size-24h" src="{{ asset('assets/image/24h24h.png')}}">
+<div class="item-center text-center px-xl-5 same-line warp-phone">
+  <div class="margin-center same-line warp-phone">
+    <div class="">
+        <img class="size-img-accueil" src="{{ asset('assets/image/24h24h.png')}}">
         <p class="line-2px font-26px text-yellow bold-600">{% trans %}Arrivée à votre convenance{% endtrans %}</p>
         <p class="font-16px text-bluelight">{% trans %}Mise à disposition d’une boite à clés sécurisée{% endtrans %}</p>
     </div>
-    <div class="center-div ">
-        <img class="size-fourchette" src="{{ asset('assets/image/fourchette.png')}}">
+    <div class="">
+        <img class="size-img-accueil" src="{{ asset('assets/image/fourchette.png')}}">
         <p class="line-2px font-26px text-yellow bold-600">{% trans %}Equipé tout confort{% endtrans %}</p>
         <p class="font-16px text-bluelight">{% trans %}Tout le matériel comme à la maison{% endtrans %}</p>
     </div>
-    <div class="center-div ">
-        <img class="size-wifi" src="{{ asset('assets/image/wifi.png')}}">
+    <div class="">
+        <img class="size-img-accueil" src="{{ asset('assets/image/wifi.png')}}">
         <p class="line-2px font-26px text-yellow bold-600">{% trans %}WIFI / Netflix{% endtrans %}</p>
         <p class="font-16px text-bluelight">{% trans %}WIFI et Netflix gratuits dans chaque appartement{% endtrans %}</p>
     </div>
-    <div class="center-div ">
-        <img class="size-serviette" src="{{ asset('assets/image/serviette.jpg')}}">
+    <div class="">
+        <img class="size-img-accueil" src="{{ asset('assets/image/serviette.jpg')}}">
         <p class="line-2px font-26px text-yellow bold-600">{% trans %}Services hoteliers{% endtrans %}</p>
         <p class="font-16px text-bluelight">{% trans %}Kit d’accueil et linge de maison fournis{% endtrans %}</p>
     </div>
+  </div>
 </div>
 
 <!-- Iframe SuperHote -->
