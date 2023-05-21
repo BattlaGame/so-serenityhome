@@ -15,14 +15,14 @@ transition: transform 0.5s ease;
 }
   
 .slide {
-    flex: 0 0 100%;
-    position: relative;
-  }
+  flex: 0 0 100%;
+  position: relative;
+}
 
-  .slide-img {
-    width: 100%;
-    object-fit: cover;
-  }
+.slide img {
+  width: 100%;
+  object-fit: cover;
+}
 
 .slide-text {
   position: absolute;
@@ -34,10 +34,6 @@ transition: transform 0.5s ease;
   color: #fff;
 }
 
-.img-logo-carrousel{
-  width: 300px!important;
-
-}
 
 .slide-text h2, .slide-text p {
   margin: 0;
