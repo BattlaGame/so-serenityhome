@@ -228,7 +228,10 @@
         margin-top: 10px!important;
     }
     .img-logo-carrousel{
-        width: 100px!important;
+        width: 130px!important;
+    }
+    .img1-text-hauteur{
+        padding: 7vw!important;
     }
 }
 
@@ -254,4 +257,8 @@
 
 .logo-toolbar{
     margin-top: -40px;
+}
+
+.img-logo-carousel{
+    width: 300px!important;
 }
