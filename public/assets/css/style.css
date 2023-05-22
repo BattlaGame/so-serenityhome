@@ -183,6 +183,12 @@
     height: 30px;
 }
 
+@media screen and (min-width: 768px) {
+    .marge-pc{
+        margin: 20px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .warp-phone{
         display: block!important;
@@ -233,6 +239,12 @@
     .img1-text-hauteur{
         padding: 7vw!important;
     }
+    .h3-phone{
+        font-size: 1.5em!important;
+    }
+    .p-phone{
+        font-size: 0.9em!important;
+    }
 }
 
 .item-center{
@@ -271,4 +283,8 @@
 
 .display-block{
     display: block;
+}
+
+.p-phone{
+    font-size: 1.2em;
 }
